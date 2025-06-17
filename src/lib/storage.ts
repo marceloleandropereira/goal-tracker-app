@@ -1,4 +1,4 @@
-import { AppState, Goal, Action, CATEGORIES } from '@/types';
+import { AppState, Goal, Action, CATEGORIES, CategoryId } from '@/types';
 
 // Funções para gerenciar o Local Storage
 const STORAGE_KEY = 'goal-tracker-data';
@@ -18,12 +18,12 @@ export const loadAppState = (): AppState => {
       const parsed = JSON.parse(stored);
       return {
         categories: CATEGORIES,
-        goals: parsed.goals?.map((goal: any) => ({
+        goals: parsed.goals?.map((goal: Goal) => ({
           ...goal,
           createdAt: new Date(goal.createdAt),
           updatedAt: new Date(goal.updatedAt)
         })) || [],
-        actions: parsed.actions?.map((action: any) => ({
+        actions: parsed.actions?.map((action: Action) => ({
           ...action,
           createdAt: new Date(action.createdAt),
           updatedAt: new Date(action.updatedAt)
@@ -60,11 +60,11 @@ export const generateId = (): string => {
   return Date.now().toString(36) + Math.random().toString(36).substr(2);
 };
 
-export const createGoal = (categoryId: string, title: string): Goal => {
+export const createGoal = (categoryId: CategoryId, title: string): Goal => {
   const now = new Date();
   return {
     id: generateId(),
-    categoryId: categoryId as any,
+    categoryId,
     title,
     createdAt: now,
     updatedAt: now

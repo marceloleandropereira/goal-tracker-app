@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { AppState, Action } from '@/types';
+import { AppState } from '@/types';
 import { loadAppState, saveAppState } from '@/lib/storage';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -108,7 +108,7 @@ export default function SystemsPage() {
 
   const environmentalActions = electedActions.filter(action => action.system === 'environmental_changes');
   const accountabilityActions = electedActions.filter(action => action.system === 'systems_of_accountability');
-  const noSystemActions = electedActions.filter(action => !action.system);
+  // const noSystemActions = electedActions.filter(action => !action.system);
   const cuttingActions = electedActions.filter(action => action.isCutting);
 
   return (

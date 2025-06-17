@@ -58,7 +58,7 @@ export default function Home() {
             Como Conseguir Tudo o Que Você Quer
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comece respondendo à pergunta fundamental: <strong>"O que eu quero?"</strong>
+            Comece respondendo à pergunta fundamental: <strong>&quot;O que eu quero?&quot;</strong>
           </p>
           <p className="text-lg text-gray-500 mt-2">
             Organize suas metas em categorias e descubra como alcançá-las.
@@ -120,7 +120,7 @@ export default function Home() {
               <div>
                 <p className="text-gray-600 mb-4">
                   Agora que você definiu suas metas, é hora de descobrir como alcançá-las.
-                  Para cada meta, responda: <strong>"Como eu consigo isso?"</strong>
+                  Para cada meta, responda: <strong>&quot;Como eu consigo isso?&quot;</strong>
                 </p>
                 <div className="bg-blue-50 p-4 rounded-md">
                   <p className="text-blue-800 text-sm">

@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { AppState, Action } from '@/types';
+import { AppState } from '@/types';
 import { loadAppState, saveAppState } from '@/lib/storage';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -257,7 +257,7 @@ export default function ProjectsPage() {
                 <div className="text-center py-8 text-gray-500">
                   <p>Nenhum projeto definido ainda.</p>
                   <p className="text-sm mt-1">
-                    Classifique algumas ações como "Projeto" acima.
+                    Classifique algumas ações como &quot;Projeto&quot; acima.
                   </p>
                 </div>
               )}
@@ -286,7 +286,7 @@ export default function ProjectsPage() {
                 <div className="text-center py-8 text-gray-500">
                   <p>Nenhuma ação simples definida ainda.</p>
                   <p className="text-sm mt-1">
-                    Classifique algumas ações como "Ação Simples" acima.
+                    Classifique algumas ações como &quot;Ação Simples&quot; acima.
                   </p>
                 </div>
               )}
